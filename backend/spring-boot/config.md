@@ -106,7 +106,7 @@ public class DefaultDataSourceConfig {
 
   private final DataSourceProperties properties;
 
-  // TODO 정리
+  // TODO 정리, 임시
   @Value("${spring.datasource.jndi-name:#{null}}")
   private String jndiName;
 
@@ -137,4 +137,4 @@ config server가 로컬 파일보다 무조건 우선이기 때문에
 - 키값 중복없이 따로 정리 되도록 설계가 필요
 - local 용 config 파일도 필요한 상태
 - 덮어쓰기가 안되니, bean 설정에서 따로 사용할 값들을 잘 구분해서 세팅? 좋은 방향같진 않음
-- 차선책으로 @Value를 임시적으로 사용 고려 
+- 차선책으로 `@Value`를 임시적으로 사용 고려. (이방법도 좋은 방향 같진 않음)
